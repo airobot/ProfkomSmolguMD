@@ -1,0 +1,52 @@
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="profkomsmolgu.smolgu.ru.profkomsmolgu.MainActivity">
+
+        <include
+            android:id="@+id/app_bar"
+            layout="@layout/app_bar" />
+
+        <fragment
+            android:id="@+id/list_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/main_list_articles"
+            android:name="profkomsmolgu.smolgu.ru.profkomsmolgu.ArticlesActivity"
+            android:layout_below="@+id/app_bar"/>
+
+        <!-- The main content view -->
+        <!--<FrameLayout-->
+        <!--android:id="@+id/frame_container"-->
+        <!--android:layout_width="240dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"/>-->
+
+        <!--<ListView-->
+        <!--android:id="@+id/list_slidermenu"-->
+        <!--android:layout_width="240dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_gravity="start"-->
+        <!--android:background="@android:color/white" />-->
+    </RelativeLayout>
+
+    <fragment
+        android:id="@+id/nav_drawer"
+        android:name="profkomsmolgu.smolgu.ru.profkomsmolgu.NavigationDrawerFragment"
+        android:layout_width="@dimen/layout_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        tools:layout="@layout/fragment_navigation_drawer_main"
+        android:elevation="30dp"/>
+
+</android.support.v4.widget.DrawerLayout>
+    <!--app:layout="@layout/fragment_navigation_drawer_main"-->

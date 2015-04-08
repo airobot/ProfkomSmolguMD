@@ -1,0 +1,44 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEE"
+    tools:context="profkomsmolgu.smolgu.ru.profkomsmolgu.NavigationDrawerFragment">
+
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:text="GHbdtn"/>-->
+
+    <LinearLayout
+        android:id="@+id/containerDrawerImage"
+        android:layout_width="match_parent"
+        android:layout_height="182dp"
+        android:background="@drawable/mdw"
+        android:orientation="horizontal"
+        android:elevation="50dp">
+
+        <!--<ImageView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="182dp"-->
+            <!--android:layout_marginTop="@dimen/margin_top"-->
+            <!--android:src="@drawable/mdw"/>-->
+
+        <!--<ListView-->-->
+        <!--<!-android:layout_width="match_parent"-->-->
+        <!--<!-android:layout_height="match_parent"-->-->
+        <!--<!-android:choiceMode="singleChoice"-->-->
+        <!--<!-android:divider="@android:color/transparent"-->-->
+        <!--<!-android:dividerHeight="0dp"-->-->
+        <!--<!-android:background="#EEE"-->-->
+        <!--<!-tools:context="ru.profkom.profkomsmolgu.NavigationDrawerFragment" />-->-->
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/drawerList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/containerDrawerImage"/>
+
+</RelativeLayout>
