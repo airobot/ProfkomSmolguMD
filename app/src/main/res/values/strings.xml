@@ -89,9 +89,12 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <array name="tabs">
-        <item>Пример1</item>
-        <item>Пример2</item>
-        <item>Пример3</item>
+        <item>Кафе и Рестораны</item>
+        <item>Праздники и подарки</item>
+        <item>Отдых и досуг</item>
+        <item>Магазины</item>
+        <item>Прочее</item>
+        <item>Акции</item>
     </array>
 
 </resources>

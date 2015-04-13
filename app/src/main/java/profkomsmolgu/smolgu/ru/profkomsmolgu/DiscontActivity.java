@@ -19,69 +19,68 @@ import profkomsmolgu.smolgu.ru.profkomsmolgu.tabs.SlidingTabLayout;
 
 public class DiscontActivity extends ActionBarActivity {
 
-//    private SlidingTabLayout mTabs;
-//    private ViewPager viewPager;
-//
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.discont_main);
-//
-//        Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
-//        setSupportActionBar(toolbar);
-//
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//        NavigationDrawerFragment drawerFragment = (NavigationDrawerFragment)
-//                getSupportFragmentManager().findFragmentById(R.id.nav_drawer);
-//        drawerFragment.setUp(R.id.nav_drawer, (DrawerLayout) findViewById(R.id.drawer_layout_diskont), toolbar);
-//
-//        mTabs = (SlidingTabLayout) findViewById(R.id.tabs_diskont);
-//        viewPager = (ViewPager) findViewById(R.id.viewPager);
-//        MyPagerAdapter adapter = new MyPagerAdapter(getSupportFragmentManager());
-//        viewPager.setAdapter(adapter);
-//        mTabs.setViewPager(viewPager);
-//
-////        viewPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener(){
-////            @Override
-////            public void onPageSelected(int position) {
-////                tabHost.setSelectedNavigationItem(position);
-////            }
-////        });
-////        for (int i = 0; i < adapter.getCount(); i++){
-////            tabHost.addTab(
-////                    tabHost.newTab()
-////                           .setText(adapter.getPageTitle(i))
-////                           .setTabListener(this)
-////            );
-////        }
-//
-//    }
-//
-//
-//    class MyPagerAdapter extends FragmentStatePagerAdapter {
-//
-//        String[] tabs;
-//
-//        public MyPagerAdapter(FragmentManager fm) {
-//            super(fm);
-//            tabs = getResources().getStringArray(R.array.nav_drawer_discont_items);
+    private SlidingTabLayout mTabs;
+    private ViewPager viewPager;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.discont_main);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        NavigationDrawerFragment drawerFragment = (NavigationDrawerFragment)
+                getSupportFragmentManager().findFragmentById(R.id.nav_drawer);
+        drawerFragment.setUp(R.id.nav_drawer, (DrawerLayout) findViewById(R.id.drawer_layout_diskont), toolbar);
+
+        mTabs = (SlidingTabLayout) findViewById(R.id.tabs_diskont);
+        viewPager = (ViewPager) findViewById(R.id.viewPagerDiskont);
+        MyPagerAdapter adapter = new MyPagerAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(adapter);
+        mTabs.setViewPager(viewPager);
+
+//        viewPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener(){
+//            @Override
+//            public void onPageSelected(int position) {
+//                tabHost.setSelectedNavigationItem(position);
+//            }
+//        });
+//        for (int i = 0; i < adapter.getCount(); i++){
+//            tabHost.addTab(
+//                    tabHost.newTab()
+//                           .setText(adapter.getPageTitle(i))
+//                           .setTabListener(this)
+//            );
 //        }
-//
-//        @Override
-//        public Fragment getItem(int position) {
-//            MyFragment myFragment = MyFragment.getInstance(position);
-//            return myFragment;
-//        }
-//
-//        @Override
-//        public CharSequence getPageTitle(int position) {
-//            return getResources().getStringArray(R.array.nav_drawer_discont_items)[position];
-//        }
-//
-//        @Override
-//        public int getCount() {
-//            return 8;
-//        }
+
+    }
+
+
+    class MyPagerAdapter extends FragmentStatePagerAdapter {
+
+        String[] tabs;
+
+        public MyPagerAdapter(FragmentManager fm) {
+            super(fm);
+            tabs = getResources().getStringArray(R.array.nav_drawer_discont_items);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            MyFragment myFragment = MyFragment.getInstance(position);
+            return myFragment;
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return tabs[position];
+        }
+
+        @Override
+        public int getCount() {
+            return 6;
+        }
 
 //		mTitle = mDrawerTitle = getTitle();
 //
@@ -104,7 +103,7 @@ public class DiscontActivity extends ActionBarActivity {
 //		mDrawerList = (ListView) findViewById(R.id.list_slidermenu);
 //
 //		navDrawerItems = new ArrayList<NavDrawerItem>();
-
+//
 //		// adding nav drawer items to array
 //		// Home
 //		navDrawerItems.add(new NavDrawerItem(navMenuTitles[0], navMenuIcons.getResourceId(0, -1)));
@@ -122,9 +121,9 @@ public class DiscontActivity extends ActionBarActivity {
 //		navDrawerItems.add(new NavDrawerItem(navMenuTitles[6], navMenuIcons.getResourceId(6, -1)));
 //		navDrawerItems.add(new NavDrawerItem(navMenuTitles[7], navMenuIcons.getResourceId(7, -1)));
 //		navDrawerItems.add(new NavDrawerItem(navMenuTitles[8], navMenuIcons.getResourceId(8, -1)));
-
-
-        // Recycle the typed array
+//
+//
+//        // Recycle the typed array
 //		navMenuIcons.recycle();
 //
 //		mDrawerList.setOnItemClickListener(new SlideMenuClickListener());
@@ -132,8 +131,8 @@ public class DiscontActivity extends ActionBarActivity {
 //		// setting the nav drawer list adapter
 //		adapter = new NavDrawerListAdapter(getApplicationContext(),
 //				navDrawerItems);
-        //mDrawerList.setAdapter(adapter);
-
+//        mDrawerList.setAdapter(adapter);
+//
 //		// enabling action bar app icon and behaving it as toggle button
 //		//getActionBar().setDisplayHomeAsUpEnabled(true);
 //		//getActionBar().setHomeButtonEnabled(true);
@@ -161,7 +160,7 @@ public class DiscontActivity extends ActionBarActivity {
 //			// on first time display view for first nav item
 //			displayView(0);
 //		}
-    }
+//    }
 
 //	/**
 //	 * Slide menu item click listener
@@ -175,8 +174,8 @@ public class DiscontActivity extends ActionBarActivity {
 //			displayView(position);
 //		}
 //	}
-//
-//
+
+
 //	/**
 //	 * Diplaying fragment view for selected nav drawer list item
 //	 * */
@@ -241,58 +240,59 @@ public class DiscontActivity extends ActionBarActivity {
 ////		startActivity(intent);
 ////	}
 //
-//	@Override
-//	public void setTitle(CharSequence title) {
-//		mTitle = title;
-//		//getActionBar().setTitle(mTitle);
-//	}
+//        @Override
+//        public void setTitle(CharSequence title) {
+//            mTitle = title;
+//            //getActionBar().setTitle(mTitle);
+//        }
 //
-//	@Override
-//	public boolean onOptionsItemSelected(MenuItem item) {
-//		// The action bar home/up action should open or close the drawer.
-//		// ActionBarDrawerToggle will take care of this.
-//        if (toggle.onOptionsItemSelected(item))
-//            return true;
-//        return super.onOptionsItemSelected(item);
-//	}
-//
-//	/**
-//	 * When using the ActionBarDrawerToggle, you must call it during
-//	 * onPostCreate() and onConfigurationChanged()...
-//	 */
-//
-//	@Override
-//	protected void onPostCreate(Bundle savedInstanceState) {
-//        super.onPostCreate(savedInstanceState);
-//        toggle.syncState();
-//	}
-//
-//	@Override
-//	public void onConfigurationChanged(Configuration newConfig) {
-//		super.onConfigurationChanged(newConfig);
-//		// Pass any configuration change to the drawer toggls
-//        toggle.onConfigurationChanged(newConfig);
-//	}
-//}
+//        @Override
+//        public boolean onOptionsItemSelected(MenuItem item) {
+//            // The action bar home/up action should open or close the drawer.
+//            // ActionBarDrawerToggle will take care of this.
+//            if (toggle.onOptionsItemSelected(item))
+//                return true;
+//            return super.onOptionsItemSelected(item);
+//        }
 
-class MyFragment extends Fragment {
-
-    public static MyFragment getInstance(int position) {
-        MyFragment myFragment = new MyFragment();
-        Bundle args = new Bundle();
-        args.putInt("position", position);
-        myFragment.setArguments(args);
-        return myFragment;
+//        /**
+//         * When using the ActionBarDrawerToggle, you must call it during
+//         * onPostCreate() and onConfigurationChanged()...
+//         */
+//
+//        @Override
+//        protected void onPostCreate(Bundle savedInstanceState) {
+//            super.onPostCreate(savedInstanceState);
+//            toggle.syncState();
+//        }
+//
+//        @Override
+//        public void onConfigurationChanged(Configuration newConfig) {
+//            super.onConfigurationChanged(newConfig);
+//            // Pass any configuration change to the drawer toggls
+//            toggle.onConfigurationChanged(newConfig);
+//        }
     }
 
-    @Override
-    public View onCreateView(LayoutInflater Inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View layout = Inflater.inflate(R.layout.my_activity, container, false);
-        TextView textView = (TextView) layout.findViewById(R.id.position);
-        Bundle bundle = getArguments();
-        if (bundle != null) {
-            textView.setText("Страница" + bundle.getInt("position"));
+    public static class MyFragment extends Fragment {
+        private TextView textView;
+        public static MyFragment getInstance(int position) {
+            MyFragment myFragment = new MyFragment();
+            Bundle args = new Bundle();
+            args.putInt("position", position);
+            myFragment.setArguments(args);
+            return myFragment;
         }
-        return layout;
+
+        @Override
+        public View onCreateView(LayoutInflater Inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+            View layout = Inflater.inflate(R.layout.my_activity, container, false);
+            textView = (TextView) layout.findViewById(R.id.position);
+            Bundle bundle = getArguments();
+            if (bundle != null) {
+                textView.setText("Страница" + bundle.getInt("position"));
+            }
+            return layout;
+        }
     }
 }
